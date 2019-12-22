@@ -1,0 +1,273 @@
+
+.landing{
+	/*background: url(images/lagoon.jpg);*/
+/*	background-size: cover;
+	background-repeat: no-repeat;*/
+	width: 100%;
+	height: 75vh;
+}
+
+.landing> img{
+	/*background: url(images/lagoon.jpg);*/
+/*	background-size: cover;
+	background-repeat: no-repeat;*/
+	object-fit: cover;
+	height: 75vh;
+	object-position: 50% 30%;
+}
+
+.other-img{
+	position: relative;
+	text-align: justify;
+}
+.card-text-location{
+	opacity: 0;
+	color: white;
+	font-size: 32px;
+	position: absolute;
+	bottom: 2px;
+	left: 5px;
+}
+.card:hover .card-text{
+	opacity: 1;
+}
+.location-section{
+	background-color: white;
+}
+.location-section{
+	height: 130vh;
+	display: inline-flex;
+	width: 100%;
+}
+.other-loc{
+	width: 25%;
+	background-color: white;
+	overflow: auto;
+}
+.other-head{
+	text-align: center;
+}
+.main-loc{
+	width: 75%;
+	padding-left: 3%;
+	padding-right: 7%;
+}
+.locationDesc{
+	text-align: justify;
+}
+.locationCard{
+	margin-left: 15%;
+	width: 70%;
+}
+
+.glyphicon{
+	margin-right: 5px;
+	margin-left: 5px;
+	font-size: 30px;
+	color: #c3c3a2;
+}
+.stats{
+	display: inline-flex;
+}
+.drop-star{
+	position: relative;
+  	display: inline-block;
+}
+.dropdown-content-star {
+	display: none;
+ 	position: absolute;
+ 	background-color: #f9f9f9;
+ 	min-width: 20px;
+ 	z-index: 1;
+}
+.dropdown-content-star li{
+	text-align: center;
+	width:100%;
+	height: 22px;
+	margin: 0px 0px 0px 1px;
+
+}
+.dropdown-content-star ul{
+	margin: 0px 0px;
+	padding: 0px 0px;
+}	
+.dropdown-content-star a{
+	color: black;
+}
+
+.drop-star:hover .dropdown-content-star{
+	display: block;
+}
+.dropdown-content-star li:hover{
+	background-color: #e0e0d1;
+}
+
+.drop-pig{
+	position: relative;
+  	display: inline-block;
+}
+.dropdown-content-pig {
+	display: none;
+ 	position: absolute;
+ 	background-color: #f9f9f9;
+ 	min-width: 20px;
+ 	z-index: 1;
+}
+.dropdown-content-pig li{
+	text-align: center;
+	width:100%;
+	height: 22px;
+	margin: 0px 0px 0px 1px;
+
+}
+.dropdown-content-pig ul{
+	margin: 0px 0px;
+	padding: 0px 0px;
+}	
+.dropdown-content-pig a{
+	color: black;
+}
+
+.drop-pig:hover .dropdown-content-pig{
+	display: block;
+}
+.dropdown-content-pig li:hover{
+	background-color: #e0e0d1;
+}
+
+.grid{
+	width: 27%;
+	height: 20%;
+	margin:auto 6% auto auto;
+	object-fit: scale-down;
+}
+.grid:hover{
+	box-shadow: 5px 10px 8px #888888;
+}
+.mod-pic{
+	width: 100%;
+}
+span{
+	display: inline-flex;
+}
+.stats-span{
+	margin-left: 55%;
+}
+.rating-head{
+	width: 100%;
+}
+.rating-header{
+	margin-right: 79%;
+}
+.comment-div{
+	height: 250px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+	border: 2px solid #888888;
+	border-radius: 7px;
+}
+
+.comment-add{
+	display: none;
+	background-color: #F1F1F1;
+	border-radius: 4px;
+	margin-bottom: 5px;
+}
+.user-name{
+	margin-left: 10%;	
+	margin-top: 10px;
+}
+.rate-rate{
+	position: relative;
+  	display: inline-block;
+  	left: 60%;
+}
+.dropdown-content-rate{
+	display: none;
+ 	position: absolute;
+ 	background-color: #f9f9f9;
+ 	min-width: 20px;
+ 	z-index: 1;
+
+}
+.dropdown-content-rate li{
+	text-align: center;
+	width:100%;
+	height: 22px;
+	margin: 0px 0px 0px 1px;
+}
+.dropdown-content-rate ul{
+	margin: 0px 0px;
+	padding: 0px 0px;
+}	
+.dropdown-content-rate a{
+	color: black;
+}
+
+.rate-rate:hover .dropdown-content-rate{
+	display: block;
+}
+.rate-rate:hover {
+	text-decoration: underline;
+}
+.dropdown-content-rate li:hover{
+	background-color: #e0e0d1;
+}
+
+
+
+
+/* } */
+.user-rate{
+	margin-left: 56.5%;
+}
+.comment-input{
+    width: 80%;
+    border: none;
+	max-width: 100%;
+	margin-left:10%;
+	margin-right: auto;
+	margin-bottom: 5px;
+}
+.post-comment{
+	margin-bottom: 10px;
+	margin-left: 10%;
+	color: white;
+	border-radius: 4px;
+	border: none;
+	background-color: #FE5000;
+}
+.comment{
+	margin-bottom: 5px;
+	background-color: #F1F1F1;
+	border-radius: 4px;
+}
+.comment:hover{
+	box-shadow: 5px 10px 8px #888888;
+}
+.user-comment{
+	width: 80%;
+	margin-left:10%;
+	margin-right: auto;
+	padding-bottom: 10px;
+}
+.glyphicon:hover{
+	color:#888888;
+}
+
+.estimateCost{
+	color:#FE5000;
+}
+
+.locationDesc{
+	font-size: 24px;
+	padding-bottom: 40px;
+}
+
+.grid{
+	width: 24rem;
+	height:24rem;
+}
+

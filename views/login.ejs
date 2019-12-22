@@ -1,0 +1,60 @@
+<%- include('partials/loginHeader') %>
+<section class="landingContent">
+    <div class="container">
+        <div class="jumbotron">
+            <div id="form-div">
+                 <h2 id="log-text"><b>Log In</b></h2>
+                 
+                <form action="/login" method="post">
+                    
+                    <!-- <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#tab-email">
+                        Email Address</a></li>
+                        <li><a data-toggle="tab" href="#tab-phone">
+                        Phone Number</a></li>
+
+                      </ul>
+
+                      <br> -->
+                    
+                    <div class="tab-content">
+                        <div id="tab-email" class="tab-pane fade in active">
+                            <input type="email" name="email" placeholder="Email address" required><br><br>
+        
+                            <input type="password" name="password" placeholder="Password" minlength="8" required><br>
+                            
+                            <a href="asd.asd" id="forgot">Forgot password?</a><br>
+                            <span>
+                                Keep me logged in
+                                <input type="checkbox" name="check" id="check">
+                            </span><br>
+
+                            <button type="submit" name="login">Log In</button>
+                        </div>
+                    </form>
+                        <!-- <div id="tab-phone" class="tab-pane fade">
+                              <input type="number" name="number" placeholder="Phone Number" required><br><br>
+        
+                                <input type="password" name="password" placeholder="Password" minlength="8" required><br>
+                            <a href="asd.asd" id="forgot">Forgot password?</a><br>
+                            
+                            <span>
+                                Keep me logged in
+                                <input type="checkbox" name="check" id="check">
+                            </span><br>
+                            <button type="submit" name="login">Log In</button>
+                        </div> -->
+                        <br>
+                        <br>
+                        <div>
+                            No account yet?
+                            <a href="/signup">Sign up</a> now!
+                        </div>
+                      </div>
+                <!-- </form> -->
+            </div>	
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

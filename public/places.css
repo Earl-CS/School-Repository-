@@ -1,0 +1,29 @@
+
+
+
+.placesContent .container{
+	margin-top: 50px;
+	border-left: solid 2px gray;
+	border-right: solid 2px gray;
+	margin-bottom: 50px;
+}
+
+
+.placesCard{
+	height: 20vh;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.cardLinks{
+	color: black;
+}
+
+.cardLinks:hover{
+	color: black;
+}
+
+.imgSpace>img{
+	height: 20vh;
+	object-fit: cover;
+}

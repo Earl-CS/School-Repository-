@@ -1,0 +1,146 @@
+/* .navbar{
+	margin: 0;
+	border:0;
+}
+
+.navbar-header>a{
+	font-family: 'Permanent Marker', cursive;
+	color: black;
+}
+
+.navbar-header>button{
+	border:none;
+}
+
+.nav>li>a{
+	font-family: 'Rubik', sans-serif;
+	color: black;
+}
+.badge{
+	font-family: 'Rubik', sans-serif;
+	background-color: red;
+}
+
+.navbar-right{
+	margin-right: 3%;
+}
+.nav>li>a:hover{
+	background-color: transparent;
+	color: orange;
+} */
+
+.navbar{
+	margin: 0;
+	border:0;
+}
+
+.navbar-header>a{
+	font-family: 'Permanent Marker', cursive;
+	font-size: 25px;
+	color: white;
+}
+
+.navbar-header>button{
+	border:none;
+}
+
+.badge{
+	font-family: 'Rubik', sans-serif;
+	background-color: red;
+}
+
+.nav>li>a{
+	font-family: 'Rubik', sans-serif;
+	font-size: 16px;
+	color: white;
+}
+
+.nav>li>a:hover{
+	background-color: transparent;
+	color: #FE5000;
+}
+
+.landingContent{
+	background: url("login.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+}
+
+.jumbotron{
+	position: relative;
+	background-color: transparent;
+	top: 15vh;
+	text-align: center;
+	padding-top: 0px;
+
+}
+
+.jumbotron>h1{
+	color: white;
+	font-size: 80px;
+}
+
+.jumbotron>h3{
+	color: white;
+}
+
+.glyphicon.glyphicon-chevron-down{
+	padding-top: 25vh;
+	font-size: 40px;
+	color: white;
+}
+
+.glyphicon.glyphicon-chevron-down:hover{
+	color: orange;
+}
+
+#form-div{
+	width: 41%;
+	
+	background-color: white;
+	margin-left: 30%;
+	
+	padding-top: 5px;
+	padding-bottom: 10px;
+	font-size: 16px;
+	color: black;
+	
+}
+#log-text{
+	text-align: left;
+	text-indent: 15%;
+}
+#forgot{
+	color: black;
+
+}
+input{
+	height: 40px;
+	text-indent: 5px;
+	
+	border: solid 1px gray;
+	width: 70%;
+}
+#log-nav{
+	font-weight: bolder;
+}
+
+ul{
+	margin-left: 16.5%;
+	width: 69%;
+}
+button{
+	border:none;
+	width: 70%;
+	height: 40px;
+	background-color: #FE5000;
+	color:white;
+}
+#check{
+	height: 20px;
+	width: 20px;
+	
+	
+}

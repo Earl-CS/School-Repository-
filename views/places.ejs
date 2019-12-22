@@ -1,0 +1,92 @@
+<% if(isLogged){ %>
+  <%-include('partials/secretHeader')%>
+<%}else{%>
+  <%- include('partials/placesHeader') %>
+<% }%>
+
+<section class="placesContent">
+    <div class="container">
+
+<!-- 			<form class="form-inline md-form form-sm mt-0">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+            aria-label="Search">
+        </form> -->
+        <% location.forEach((locations) => { %>
+          <a href="/places/<%= locations._id %>" class="cardLinks">
+              <div class="card mb-3 placesCard">
+                <div class="row no-gutters">
+                  <div class="col-md-4  col-sm-3 col-2 imgSpace">
+                    <img src="<%= locations.splashImage%> " class="card-img img-responsive" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= locations.locationName %></h5>
+                      <p class="card-text"><%= locations.description %></p>
+                      <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </a>
+        <% }); %>
+        
+
+        <!-- <a href="" class="cardLinks">
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-4  col-sm-3 col-2 imgSpace">
+                  <img src="images/cove.jpg" class="card-img img-responsive" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">[Name of Place/Location]</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </a>
+
+
+        <a href="" class="cardLinks">
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-4 col-sm-3 col-2 imgSpace">
+                  <img src="images/cove.jpg" class="card-img img-responsive" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">[Name of Place/Location]</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </a>
+
+        <a href="" class="cardLinks">
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-4  col-sm-3 col-2 imgSpace">
+                  <img src="images/cove.jpg" class="card-img img-responsive" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">[Name of Place/Location]</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </a> -->
+
+
+    </div> 
+
+</section>
+
+<%- include('partials/footer') %>

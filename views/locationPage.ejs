@@ -1,0 +1,249 @@
+
+<% if(isLogged){ %>
+    <%-include('partials/secretHeader')%>
+<%}else{%>
+    <%- include('partials/locationHeader') %>
+<% }%>
+<section class="landing">
+    <img class="card-img-top" src="<%=location.splashImage%>">  
+</section>
+<section class="location-section">
+    <div class="other-loc">
+        <h2 class="other-head">More cool locations</h2>
+        <% locationList.slice(location.index, location.index+5).forEach((locations) =>{ %>
+        <a href="/places/<%= locations._id %>" class="other-card">
+            <div class="card locationCard">
+              <img src="<%=locations.splashImage%>" class="card-img-top other-img" alt="...">
+              <h4 class="card-title  card-text card-text-location"><%= locations.locationName%></h4>
+            </div>
+        </a><br>
+        <% }); %>
+        <!-- <a href="" class="other-card">
+            <div class="card">
+              <img src="<%=location.splashImage%>" class="card-img-top other-img" alt="...">
+              <h4 class="card-title  card-text">Location Name</h4>
+            </div>
+        </a><br>
+        <a href="" class="other-card">
+            <div class="card">
+              <img src="<%=location.splashImage%>" class="card-img-top other-img" alt="...">
+              <h4 class="card-title  card-text">Location Name</h4>
+            </div>
+        </a><br>
+        <a href="" class="other-card">
+            <div class="card">
+              <img src="<%=location.splashImage%>" class="card-img-top other-img" alt="...">
+              <h4 class="card-title  card-text">Location Name</h4>
+            </div>
+        </a><br>
+        <a href="" class="other-card">
+            <div class="card">
+              <img src="<%=location.splashImage%>" class="card-img-top other-img" alt="...">
+              <h4 class="card-title  card-text">Location Name</h4>
+            </div>
+        </a><br> -->
+    </div>
+    <div class="main-loc">
+        <span class="loc-span">
+            <h1><%= location.locationName %></h1>
+        </span>
+        <% if(isLogged){%>
+        <span class="stats-span">
+            <div class="stats">
+            <a href="/places/<%=location._id%>/markVisited"><span class="glyphicon glyphicon-map-marker"></span></a>
+            <a href="/places/<%=location._id%>/markFavorite"><span  class="glyphicon glyphicon-heart" ></span></span></a>
+        </div>
+        <%}%>    
+        </span>
+
+        <h4 class="estimateCost"><%= location.estimateCost %>php</h4><br>
+        <p class="locationDesc">
+            <%= location.description %>
+        </p>
+        
+        <div>
+            <div class="modal fade" id="LocModal1" tabindex="-1" role="dialog" aria-labelledby="generatedLocationCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+                  <div class="modal-body">
+                        <img class="mod-pic"src="<%=location.splashImage%>">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="grid" title="This is image 1" src="<%=location.splashImage%>" data-toggle="modal" data-target="#LocModal1">
+
+
+            <div class="modal fade" id="LocModal2" tabindex="-1" role="dialog" aria-labelledby="generatedLocationCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+                  <div class="modal-body">
+                        <img class="mod-pic"src="<%=location.splashImage%>">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="grid" title="This is image 2" src="<%=location.splashImage%>" data-toggle="modal" data-target="#LocModal2">
+
+
+            <div class="modal fade" id="LocModal3" tabindex="-1" role="dialog" aria-labelledby="generatedLocationCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+                  <div class="modal-body">
+                        <img class="mod-pic"src="<%=location.splashImage%>">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="grid" title="This is image 3" src="<%=location.splashImage%>" data-toggle="modal" data-target="#LocModal3">
+        </div>
+        <div class="rating-head">
+            <span class="rating-header">
+                <h3>User Ratings</h3>
+            </span>
+            <span onclick="addFunction()" class="add-span glyphicon glyphicon-plus" title="Feature not yet available">
+            </span>
+        </div>
+        <div class="comment-div">				
+            <div class="comment-list">
+                <div id="add-comment"class="comment-add">
+                    <span class="user-name">
+                        <h4 class="text-muted">User Name</h4>
+                    </span>
+                    <span class="user-rate rate-rate">
+                        Rating: 0/0
+                        <div class="dropdown-content-rate">
+                        <ul>
+                            <a href="">
+                                <li>
+                                    1
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    2
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    3
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    4
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    5
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    6
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    7
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    8
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    9
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    10
+                                </li>
+                            </a>
+                        </ul>
+                </div>	
+                    </span>
+                    <textarea class="comment-input" rows="4">
+                        
+                    </textarea>
+                    <div>
+                        <button class="post-comment">Submit</button>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <span class="user-name">
+                        <h4>User Name</h4>
+                    </span>
+                    <span class="user-rate">
+                        Rating: 0/0
+                    </span>
+                    <p class="user-comment">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum erat risus, ut convallis tortor molestie non. Aenean at lorem vel ipsum aliquam mollis. Proin porttitor tellus vel ante ullamcorper venenatis. Proin porttitor dui elit, sed fermentum sapien finibus quis. I need sleep.
+                    </p>
+                </div>
+                <!-- <div class="comment">
+                    <span class="user-name">
+                        <h4>User Name</h4>
+                    </span>
+                    <span class="user-rate">
+                        Rating: 0/0
+                    </span>
+                    <p class="user-comment">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum erat risus, ut convallis tortor molestie non. Aenean at lorem vel ipsum aliquam mollis. Proin porttitor tellus vel ante ullamcorper venenatis. Proin porttitor dui elit, sed fermentum sapien finibus quis. I need sleep.
+                    </p>
+                </div>
+                <div class="comment">
+                    <span class="user-name">
+                        <h4>User Name</h4>
+                    </span>
+                    <span class="user-rate">
+                        Rating: 0/0
+                    </span>
+                    <p class="user-comment">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum erat risus, ut convallis tortor molestie non. Aenean at lorem vel ipsum aliquam mollis. Proin porttitor tellus vel ante ullamcorper venenatis. Proin porttitor dui elit, sed fermentum sapien finibus quis. I need sleep.
+                    </p>
+                </div>
+                <div class="comment">
+                    <span class="user-name">
+                        <h4>User Name</h4>
+                    </span>
+                    <span class="user-rate">
+                        Rating: 0/0
+                    </span>
+                    <p class="user-comment">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum erat risus, ut convallis tortor molestie non. Aenean at lorem vel ipsum aliquam mollis. Proin porttitor tellus vel ante ullamcorper venenatis. Proin porttitor dui elit, sed fermentum sapien finibus quis. I need sleep.
+                    </p>
+                </div> -->
+                
+            </div>
+        </div>
+	</div>
+</section>
+
+<%- include('partials/footer') %>

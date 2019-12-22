@@ -1,0 +1,89 @@
+<%- include('partials/adminHeader') %>
+<section class="add-section">
+    <form class="add-form" action="/addLocation" method="post">
+        <h2>Add Location</h2>
+        <table class="form-table">
+            <tr>
+                <td colspan="4">  Location Name<br>
+                    <input type="text" name="locationName" size="95" placeholder="Name of Place">
+                </td>
+            </tr>
+            <tr>
+                <td>  Address<br>
+                    <input type="text" name="town" placeholder=" Town" >
+                </td>
+                <td> <br>
+                    <input type="text" name="city" placeholder=" City">
+                </td>
+                <td> <br>
+                    <input type="text" name="province" placeholder=" Province">
+                </td>
+                <td> <br>
+                    <input type="text" name="country" placeholder=" Country">
+                </td>
+            </tr>
+            <tr>
+                <td>  Index<br>
+                    <input type="text" name="index" placeholder=" Index" >
+                </td>
+                <td colspan="2">  Splash Image<br>
+                    <input type="text" name="splashImage" placeholder=" Image URL" size="45">
+                </td>
+                <td>  Estimated Cost<br>
+                    <input type="text" name="estimateCost" placeholder=" In Pesos" >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">Description<br>
+                    <textarea rows="4" name="description"placeholder="description"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><br>
+                    <button class="btn-add" type="submit" name="addLocation">Add Location</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</section>
+
+<!-- <section class="container">
+  <div class="collapse navbar-collapse" id="bs-demo">
+  <footer class="row">
+    <div class="sozial col-xs-12 col-sm-6 col-sm-push-6">
+      <ul class="row">
+        <li class="col-xs-6 col-sm-2">
+          <a href="#">
+            <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_facebook-128.png">
+          </a>
+        </li>
+        <li class="col-xs-6 col-sm-2">
+          <a href="#">
+            <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/twitter_online_social_media-128.png">
+          </a>
+        </li>
+        <li class="col-xs-6 col-sm-2">
+          <a href="#">
+            <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/instagram_online_social_media_photo-128.png">
+          </a>
+        </li>
+        <li class="col-xs-6 col-sm-2">
+          <a href="#">
+            <img class="logo" src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_google_plus-128.png">
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="copyright col-xs-12 col-sm-3 col-sm-pull-6">
+      <p> &copy; Local Landings</p>
+    </div>
+    
+    <div class="impressum col-xs-12 col-sm-3 col-sm-pull-6">
+      <p>Frustrated CS production</p>
+      
+    </div>
+  </footer>
+    </div>
+</section> -->
+<%- include('partials/footer') %>

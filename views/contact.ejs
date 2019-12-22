@@ -1,0 +1,32 @@
+<%- include('partials/contactHeader') %>
+
+<section class="contactLanding">
+    <div class="container">
+        <div class="jumbotron contactJumbo">
+            <div id="form-div">
+                 <h2 id="log-text"><b>Contact Us</b></h2>
+                 
+                <form>
+                    <input type="text" name="name" placeholder="Full Name" required><br>
+                    <br>
+                    <input type="email" name="email" placeholder="Email" required><br>
+                    <br>
+                    <input type="text" name="subject" placeholder="Subject" required><br>
+                    <br>
+                    <textarea rows="4" name="comment"placeholder="Message" required></textarea><br>
+                    <p id="form-par1">*Please enter a valid email <br>
+                    address so we can get back to you.<br></p>
+                    <button type="submit" name="signup">Submit</button><br><br>
+                    <p id="form-par2">
+                        Email: locallandings@bazinga.biz<br>
+                        Facebook: Local Landings - Cebu<br>
+                        Twitter: <a href="">@locallandings</a><br>
+                        Instagram: <a href="">@locallandings</a><br>
+                    </p>
+                </form>
+            </div>	
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

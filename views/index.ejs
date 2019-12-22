@@ -1,0 +1,180 @@
+<% if(isLogged){ %>
+    <%-include('partials/secretHeader')%>
+<%}else{%>
+    <%-include('partials/header')%>
+<% }%>
+<div class="modal fade" id="generatedLocationCenter" tabindex="-1" role="dialog" aria-labelledby="generatedLocationCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <%generated.forEach((location) =>{%>
+        <div class="modal-body">
+          <table>
+              <tr>
+                  <td>
+                      <img class="mod-pic"src="<%=location.splashImage%>">
+                  </td>
+                  <td>
+                      <h2><%=location.locationName%></h2>
+                      <p class="modal-text">
+                        <%=location.description%>
+                      </p>
+                      <!-- <button type="button" class="btn btn-secondary btn-xs">Check it out</button> -->
+                      <a href="/places/<%= location._id %>" class="btn btn-danger">Check it Out!</a>
+                  </td>
+              </tr>
+          </table>	     
+        </div>
+        <%});%>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-xs" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <section class="landingContent">
+        <div class="container">
+            <div class="jumbotron">
+                <h1>EXPLORE</h1>
+                <h3>to places you've never been</h3>
+
+                <a href="#generateSec" class="jumpTo">
+                    <div class="glyphicon glyphicon-chevron-down"></div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="featureLocation container">
+		<div class="feature-head">
+			<h2>TODAY’S FEATURED LOCATIONS</h2>
+			<p>Check out today's featured locations.</p>
+		</div>
+		
+		<div class="feat">
+			<table>
+				<tr>
+                <% location.slice(0,4).forEach((locations) => { %>
+					<td>
+						<a href="/places/<%= locations._id %>">
+							<div class="card mb-3 lay locard">
+								<div class="view overlay">
+							     	<img class="card-img-top" src="<%=locations.splashImage%>" alt="Card image cap">
+							     	<div class="loc-text"><%=locations.locationName%></div>
+							    </div>
+							</div>
+						</a>
+                    </td>
+                   <% }); %>
+				
+				</tr> 
+				<tr> 
+                    <% location.slice(4,8).forEach((locations) => { %>
+                    <td>
+                        <a href="/places/<%= locations._id %>">
+                            <div class="card mb-3 lay">
+                                <div class="view overlay locard">
+                                        <img class="card-img-top" src="<%=locations.splashImage%>" alt="Card image cap">
+                                        <div class="loc-text"><%=locations.locationName%></div>
+                                </div>
+                            </div>
+                        </a>
+                    </td>
+                    <% }); %>
+				</tr>
+			</table>
+    </section>
+    
+    <section class="generateSection" id="generateSec">
+            <div class="container">
+                <div class="promotion">
+                    <p>PROMOTION</p>
+                </div>
+                <h2>GENERATE A LOCATION</h2>
+                <p>get a random location for you to go on an adventure!</p>
+                <div class="btn-div">
+                    <span>
+                        <button class="gen-btn" data-toggle="modal" data-target="#generatedLocationCenter">GENERATE</button> 
+                    </span>
+                    <br>
+                    <!-- <span>
+                        <a href=""><h3>Filter</h3></a>
+                    </span> -->
+                    
+                    <p class="text-muted">or click <a href="/places">here</a> to browse locations</p>
+                </div>
+                
+            </div>
+    
+        </section>
+
+    <!-- <section class="generateSection" id="generateSec">
+        <div class="container">
+            <h2>Looking for a travel destination?</h2>
+            <div class="pinkBag"></div>
+            <h2>Click to generate a location</h2>
+            <button class="btn" data-toggle="modal" data-target="#generatedLocationCenter">generate</button> 
+            <p class="text-muted">or click <a href="places.html">here</a> to browse <br> locations</p>
+        </div>
+
+    </section> -->
+
+    <!-- 	<section class="midBanner">
+        <a href=""><img src="images/coveBanner.jpg"></a>
+    </section> -->
+
+    <!-- <section class="featureLocation">
+        <div class="row">
+			<div class="col-lg-2">
+				
+			</div>
+
+			<div class="col-lg-8">
+				<div class="card-deck">
+							
+				<% location.forEach((locations) => { %>		  
+					<a href="">
+						<div class="card mb-4">
+
+							
+							<div class="view overlay">
+							  <img class="card-img-top" src="<%=locations.splashImage%>" alt="Card image cap">
+							  <a href="#!">
+								<div class="mask rgba-white-slight"></div>
+							  </a>
+							</div>
+		
+							
+							<div class="card-body">
+		
+							 
+							  <h4 class="card-title"><%= locations.locationName %></h4>
+							  
+							  <p class="card-text"><%= locations.description %></p>
+							  <a href="">
+							 
+							  </a>
+							</div>
+		
+						  </div>
+					</a>
+				<% }); %>
+		
+
+				 
+			<div class="col-lg-2">
+				
+			</div>
+		</div>
+    </section> -->
+<%- include('partials/footer') %>

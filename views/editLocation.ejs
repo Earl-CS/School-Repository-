@@ -1,0 +1,51 @@
+<%- include('partials/adminHeader') %>
+
+<section class="add-section">
+    <form class="add-form" action="/places/<%=location._id%>/edit?_method=PUT" method="post">
+        <h2>Edit Location</h2>
+        <table class="form-table">
+            <tr>
+                <td colspan="4">  Location Name<br>
+                    <input type="text" name="locationName" size="95" value="<%=location.locationName%>">
+                </td>
+            </tr>
+            <tr>
+                <td>  Address<br>
+                    <input type="text" name="town" value="<%=location.address.town%>" >
+                </td>
+                <td> <br>
+                    <input type="text" name="city" value="<%=location.address.city%>">
+                </td>
+                <td> <br>
+                    <input type="text" name="province" value="<%=location.address.province%>">
+                </td>
+                <td> <br>
+                    <input type="text" name="country" value="<%=location.address.country%>">
+                </td>
+            </tr>
+            <tr>
+                <td>  Index<br>
+                    <input type="text" name="index" value="<%=location.index%>" >
+                </td>
+                <td colspan="2">  Splash Image<br>
+                    <input type="text" name="splashImage" value="<%=location.splashImage%>" size="45">
+                </td>
+                <td>  Estimated Cost<br>
+                    <input type="text" name="estimateCost" value="<%=location.estimateCost%>" >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">Description<br>
+                    <textarea rows="5" name="description"><%=location.description%></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><br>
+                    <button class="btn-add" type="submit" name="addLocation">save changes</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</section>
+
+<%- include('partials/footer') %>
